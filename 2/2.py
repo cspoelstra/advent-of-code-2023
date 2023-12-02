@@ -1,10 +1,10 @@
 import re
 import math
-from typing import Dict
+from typing import Dict, Tuple
 
 
 class GameParser:
-    def parse_file(self, filename: str, cubes_available: Dict[str, int]) -> int:
+    def parse_file(self, filename: str, cubes_available: Dict[str, int]) -> Tuple[int, int]:
         res1, res2 = 0, 0
         with open(filename, 'r') as f:
             for line in f.readlines():
